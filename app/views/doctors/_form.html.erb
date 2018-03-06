@@ -1,0 +1,41 @@
+<%= form_for @doctor, url: path, method: method do |f| %>
+  <div class="form-group row">
+    <div class="col-md-3 col-form-label">
+      <%= f.label :Nombres %>
+    </div>
+    <div class="col-md-9 input-wrapper">
+      <%= f.text_field :names, class: "form-control", required:"required", maxlength:"50" %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-3 col-form-label">
+      <%= f.label :Apellidos %>
+    </div>
+    <div class="col-md-9 input-wrapper">
+      <%= f.text_field :lastname, class: "form-control", required:"required", maxlength:"50" %>
+    </div>
+  </div>  
+  <div class="form-group row">
+    <div class="col-md-3 col-form-label">
+      <%= f.label :DNI%>
+    </div>
+    <div class="col-md-9 input-wrapper">
+      <%= f.text_field :dni, class: "form-control only-numbers", required:"required",maxlength:"11" %>
+    </div>
+  </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-3 col-form-label">
+      <%= f.label :dirección%>
+    </div>
+    <div class="col-md-9 input-wrapper">
+      <%= f.text_field :address, class: "form-control", required:"required" %>
+    </div>
+  </div>
+  <div class="sical-form-buttons">
+    <div class="text-center">
+      <%= link_to "Cancelar", doctors_path, class: "btn btn-primary sical-btn-cancel"  %>
+      <%= f.submit "Guardar", class: "btn btn-primary", data: {disable_with: 'Please Wait...'}  %>
+    </div>
+  </div>
+<% end %>
