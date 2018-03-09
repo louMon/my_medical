@@ -1,27 +1,30 @@
-<nav class="navbar navbar-default navbar-toggleable-md navbar-inverse">
-  <div class="navbar-minimize">
-      <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
-           <i class="ti-arrow-left"></i>
-      </button>
-  </div>
-  <div class="navbar-collapse" id="navbarItems" >
-    <ul class="nav navbar-nav ml-auto">
-      <%#h6 class="user-name">Laboratorios</p></h6%>
-      <li style="height: 77px;"">
-        <a href="#" class="dropdown-toggle nav-link sical-dropdown" data-toggle="dropdown">
-          <i class="ti-user nav-icon"></i>
-          <p class="hidden-lg-up">Profile</p>
-        </a>
-        <div class="dropdown-menu only-dropdown" aria-labelledby="notificationList">
-          <%= link_to "Profile", edit_profile_path(current_user) , class: "dropdown-item" %>
-          <% if user_signed_in? %>
-            <%= link_to "Logout", destroy_user_session_path, :method=>'delete', class: "dropdown-item" %>
-          <%# else %>
-            <%#= link_to "Logout", signout_path, class: "dropdown-item" %>
-          <% end %>
-        </div>
-      </li>
-      <li class="separator hidden-lg-up"></li>
-    </ul>
-  </div>
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong></a>
+                </div>
+                <div class="logo-element">
+                    YOU
+                </div>
+            </li>
+            <li>
+                <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="index.html">Dashboard v.1</a></li>
+                    <li><a href="dashboard_2.html">Dashboard v.2</a></li>
+                    <li><a href="dashboard_3.html">Dashboard v.3</a></li>
+                    <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
+                    <li><a href="dashboard_5.html">Dashboard v.5 </a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
+
+<!--Aca se tiene que aplicar el back, pero primero debo terminar el login-->
