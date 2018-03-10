@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   get 'patients/update'
 
-  root 'patients#index', as: 'index'
+  get 'patients/index'
+  #root 'patients#index', as: 'index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
