@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/dashboard'
+
   get 'patients/new'
 
   get 'patients/create'
@@ -9,7 +11,8 @@ Rails.application.routes.draw do
   get 'patients/update'
 
   get 'patients/index'
-  #root 'patients#index', as: 'index'
+
+  root 'pages#login', as: 'login'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

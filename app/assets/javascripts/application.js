@@ -11,12 +11,12 @@
 // about supported directives.
 //
 
-//= require inspinia.js
-//= require jquery-2.1.1.js
-//= require jquery-ui-1.10.4.min.js
-//= require jquery-ui.custom.min.js
-//= require jquery-ui.min.js
+
+//= require jquery-3.1.1.min.js
 //= require jquery.metisMenu.js
+//= require bootstrap.js
+//= require pace.min.js
 //= require jquery.peity.min.js
 //= require jquery.slimscroll.min.js
-//= require pace.min.js
+//= require inspinia.js
+
